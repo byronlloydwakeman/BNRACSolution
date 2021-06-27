@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManager", "DataManager\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataManager.Library", "DataManager.Library\DataManager.Library.csproj", "{8FE8AAA7-3EDF-44EB-AB32-707BCC12AA9A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{1E3FD6A2-29A1-431B-AE91-CF4116011C11}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Data", "Data\Data.sqlproj", "{A1FEF30C-752E-470B-99F1-0EFCB199808C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,12 @@ Global
 		{8FE8AAA7-3EDF-44EB-AB32-707BCC12AA9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FE8AAA7-3EDF-44EB-AB32-707BCC12AA9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FE8AAA7-3EDF-44EB-AB32-707BCC12AA9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FEF30C-752E-470B-99F1-0EFCB199808C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1FEF30C-752E-470B-99F1-0EFCB199808C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1FEF30C-752E-470B-99F1-0EFCB199808C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A1FEF30C-752E-470B-99F1-0EFCB199808C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1FEF30C-752E-470B-99F1-0EFCB199808C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1FEF30C-752E-470B-99F1-0EFCB199808C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +40,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B39DA1B8-2BCD-4CCC-8353-8BAD3DC413ED} = {AB712AE0-C6A2-465F-A18A-EAA73690E4CC}
 		{8FE8AAA7-3EDF-44EB-AB32-707BCC12AA9A} = {AB712AE0-C6A2-465F-A18A-EAA73690E4CC}
+		{A1FEF30C-752E-470B-99F1-0EFCB199808C} = {1E3FD6A2-29A1-431B-AE91-CF4116011C11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {10ED66E8-9BC1-4483-975F-5DADCC8C4EBB}
