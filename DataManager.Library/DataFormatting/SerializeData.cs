@@ -8,11 +8,23 @@ namespace DataManager.Library.DataFormatting
 {
     public static class SerializeData
     {
+        /// <summary>
+        /// A list of string will be passed as a parameter.
+        /// Create an empty temp string.
+        /// Loop through the list of strings, adding each one to the temp string with a ";" following it.
+        /// Return the temp variable.
+        /// </summary>
         public static string Serialize(List<string> data)
         {
-            //Loop through every value and add a semicolon to it and return the sum of strings as a single string
+            string temp = "";
 
-            return "";
+            foreach (var item in data)
+            {
+                temp += item;
+                temp += ";";
+            }
+
+            return temp;
         }
     }
 }
