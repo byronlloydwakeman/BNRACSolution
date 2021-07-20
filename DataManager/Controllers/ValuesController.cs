@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataManager.Library.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,7 +8,6 @@ using System.Web.Http;
 
 namespace DataManager.Controllers
 {
-    [Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
@@ -17,9 +17,9 @@ namespace DataManager.Controllers
         }
 
         // GET api/values/5
-        public string Get(int id)
+        public string Get(int str, int stam, int dur, EnumQuirk quirk)
         {
-            return "value";
+            return $"str : {str}, stam : {stam}, dur : {dur}, quirk : {quirk}";
         }
 
         // POST api/values
