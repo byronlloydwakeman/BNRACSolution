@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="72bd618f-080d-4b0c-837f-c2bab4d5338c" ChangeDateTime="06/30/2021 19:37:46">
+    <Property Name="ElementName" Value="[dbo].[AutoClick].[MinStr]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AutoClick]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MinimumSrength" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="95c3666e-b04b-4eee-afa3-2001a121464b" ChangeDateTime="06/30/2021 19:37:52">
+    <Property Name="ElementName" Value="[dbo].[AutoClick].[MinimumSrength]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AutoClick]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MinimumStrength" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="847cc1b1-07c6-449d-a708-74d462ee3619" ChangeDateTime="06/30/2021 19:37:57">
+    <Property Name="ElementName" Value="[dbo].[AutoClick].[MinStam]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AutoClick]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MinimumStamina" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="1db671bb-f8fb-4472-afc6-aa23c8867d6b" ChangeDateTime="06/30/2021 19:38:02">
+    <Property Name="ElementName" Value="[dbo].[AutoClick].[MinDur]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AutoClick]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MinimumDurability" />
+  </Operation>
+</Operations>
