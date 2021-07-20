@@ -1,4 +1,6 @@
-﻿using DataManager.Library.DataFormatting;
+﻿using Autofac;
+using DataManager.Library.AutoFac;
+using DataManager.Library.DataFormatting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +10,20 @@ using Xunit;
 
 namespace DataManager.Library.Tests
 {
-    public class SerializeDataTests
+    public class FormatDataTests
     {
+        private readonly IFormatData _formatData;
+
+        public FormatDataTests()
+        {
+            var container = ContainerConfig.Configure();
+
+            using (ILifetimeScope scope = container.BeginLifetimeScope())
+            {
+                _formatData = scope.Resolve<IFormatData>();
+            }
+        }
+
         /// <summary>
         /// Pass through a given number of strings, the formatted version, and a bool for whether it's a correct version.
         /// Enter the given number of strings into the algorithm as a list.
@@ -28,7 +42,7 @@ namespace DataManager.Library.Tests
                 s3
             };
 
-            string actualSerialized = SerializeData.Serialize(temp);
+            string actualSerialized = _formatData.FormatStringListToIncludeSemiColons(temp);
 
             bool actual;
 

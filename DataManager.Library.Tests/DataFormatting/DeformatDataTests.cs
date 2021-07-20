@@ -1,4 +1,6 @@
-﻿using DataManager.Library.DataFormatting;
+﻿using Autofac;
+using DataManager.Library.AutoFac;
+using DataManager.Library.DataFormatting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,8 +10,20 @@ using Xunit;
 
 namespace DataManager.Library.Tests
 {
-    public class DeserializeDataTests
+    public class DeformatDataTests
     {
+        private readonly IDeformatData _deformatData;
+
+        public DeformatDataTests()
+        {
+            var container = ContainerConfig.Configure();
+
+            using (ILifetimeScope scope = container.BeginLifetimeScope())
+            {
+                _deformatData = scope.Resolve<IDeformatData>();
+            }
+        }
+
         /// <summary>
         /// Pass through the string of the data to be deserialized, the deserialized strings and bool for whether it should be equal or not.
         /// Enter the data to deserialized into the algorithm, sets its value to a list of string.
@@ -25,7 +39,7 @@ namespace DataManager.Library.Tests
         [InlineData("100;500;1200", "100", "500", "1200", true)]
         public void DeserializeTest(string serialized, string exp1, string exp2, string exp3, bool expected)
         {
-            List<string> actualList = DeserializeData.Deserialize(serialized);
+            List<string> actualList = _deformatData.DeformatStringIntoList(serialized);
 
             List<string> expectedList = new List<string>()
             {
