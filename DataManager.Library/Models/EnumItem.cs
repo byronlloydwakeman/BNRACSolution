@@ -8,6 +8,7 @@ namespace DataManager.Library.Models
 {
     public enum EnumItem //All the items as enum values
     {
-
+        HalloweenScythe,
+        ChristmasArmor
     }
 }

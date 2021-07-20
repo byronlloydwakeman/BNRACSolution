@@ -8,7 +8,7 @@ namespace DataManager.Library.Models
 {
     public class MoveModel
     {
-        public List<string> KeyStroke { get; set; }
+        public List<string> Moves { get; set; }
         public List<int> Timing { get; set; }
     }
 }

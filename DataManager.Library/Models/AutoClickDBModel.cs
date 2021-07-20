@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace DataManager.Library.Models
 {
-    public class AutoClickModel
+    public class AutoClickDBModel
     {
-        public EnumQuirk Quirk { get; set; }
+        public string Quirk { get; set; }
         public int MinimumStrength { get; set; }
         public int MinimumStamina { get; set; }
         public int MinimumDurability { get; set; }
-        public List<EnumItem> Items { get; set; }
-        public MoveModel SequenceOfMoves { get; set; }
+        public string Items { get; set; }
+        public string Moves { get; set; }
+        public string Timing { get; set; }
     }
 }

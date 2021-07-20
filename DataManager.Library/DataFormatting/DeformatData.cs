@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataManager.Library.DataFormatting
 {
-    public static class DeserializeData
+    public class DeformatData : IDeformatData
     {
         /// <summary>
         /// Create a temp list of type string.
@@ -16,8 +16,10 @@ namespace DataManager.Library.DataFormatting
         /// If it is, add the temp string to the list, and set its value to "".
         /// Return the temp list.
         /// </summary>
-        public static List<string> Deserialize(string data)
+        public List<string> DeformatStringIntoList(string paramData)
         {
+            string data = paramData.Remove(0, 1);
+            
             List<string> tempList = new List<string>();
             string tempString = "";
 
@@ -36,6 +38,5 @@ namespace DataManager.Library.DataFormatting
 
             return tempList;
         }
-
     }
 }

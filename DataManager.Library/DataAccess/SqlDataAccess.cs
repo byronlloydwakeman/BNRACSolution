@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace DataManager.Library.DataAccess
 {
-    public class SqlDataAccess
+    public class SqlDataAccess : ISqlDataAccess
     {
         public string GetConnectionString(string name)
         {
-            return "";
+            return @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Data;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
         }
 
         public List<T> LoadData<T, U>(string storedProcedure, U parameters, string connectionStringName)

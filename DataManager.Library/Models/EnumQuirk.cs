@@ -8,6 +8,10 @@ namespace DataManager.Library.Models
 {
     public enum EnumQuirk //All the quirks stored as enum values
     {
-        
+        Electric,
+        Creation,
+        Muscular,
+        AllForOne,
+        OneForAll
     }
 }

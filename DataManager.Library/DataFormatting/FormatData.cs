@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataManager.Library.DataFormatting
 {
-    public static class SerializeData
+    public class FormatData : IFormatData
     {
         /// <summary>
         /// A list of string will be passed as a parameter.
@@ -14,7 +14,7 @@ namespace DataManager.Library.DataFormatting
         /// Loop through the list of strings, adding each one to the temp string with a ";" following it.
         /// Return the temp variable.
         /// </summary>
-        public static string Serialize(List<string> data)
+        public string FormatStringListToIncludeSemiColons(List<string> data)
         {
             string temp = "";
 
